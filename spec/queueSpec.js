@@ -19,7 +19,14 @@ describe("queue", function() {
     expect(queue.enqueue).to.be.a('function');
     expect(queue.dequeue).to.be.a('function');
     expect(queue.size).to.be.a('function');
+
   });
 
   // Hey! Add tests here that thoroughly test the functionality of your queue
+  it('should enqueue at the end of the queue', function() {
+    //queue.enqueue("test");
+    expect(queue.enqueue("test")).to.equal("test");
+    expect(queue.enqueue("test", "hi", 5)).to.equal("test","hi", 5);
+    
+  });
 });
